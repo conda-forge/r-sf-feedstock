@@ -8,7 +8,7 @@ Package license: GPL-2
 Feedstock license: BSD 3-Clause
 
 Summary: Support for simple features, a standardized way to encode spatial vector data.
-Binds  to GDAL for reading and writing data, to GEOS for geometrical operations, and to Proj.4
+Binds to GDAL for reading and writing data, to GEOS for geometrical operations, and to Proj.4
 for projection conversions and datum transformations.
 
 
@@ -69,6 +69,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========

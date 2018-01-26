@@ -40,8 +40,10 @@ requirements:
     - r-base
     - r-dbi >=0.5
     - r-rcpp
+    - r-classint
     - r-magrittr
-    - r-units >=0.4
+    - r-pillar
+    - r-units >=0.4_6
     - libgcc  # [not win]
     - r-rgdal
 
