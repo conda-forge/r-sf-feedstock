@@ -1,4 +1,4 @@
-{% set version = '0.6-0' %}
+{% set version = '0.6-3' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,10 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 532692a5850e6c9ba97e1465060eb3875e727a33abb3fdb48897ee7e6585cf3c
+  sha256: 4aee5e166e3514d2d3d1b56ae64156e7c6c39da2cf447ead14ca524899f7ca30
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win]
 
   rpaths:
@@ -24,28 +25,33 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('cxx') }}      # [not win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
+    - {{posix}}autoconf
+    - {{posix}}automake          # [not win]
+    - {{posix}}automake-wrapper  # [win]
+    - {{posix}}pkg-config
+    - {{posix}}make
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-    - r-dbi >=0.5
+    - r-dbi >=0.8
     - r-rcpp
     - r-classint
     - r-magrittr
-    - r-pillar
-    - r-units >=0.4_6
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-    - r-rgdal
-
+    - r-units >=0.5_1
   run:
     - r-base
-    - r-dbi >=0.5
+    - {{native}}gcc-libs         # [win]
+    - r-dbi >=0.8
     - r-rcpp
     - r-classint
     - r-magrittr
-    - r-pillar
-    - r-units >=0.4_6
-    - libgcc  # [not win]
-    - r-rgdal
+    - r-units >=0.5_1
 
 test:
   commands:
