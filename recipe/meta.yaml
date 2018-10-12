@@ -43,6 +43,9 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.5_1
+    - geos >=3.4.0
+    - libgdal >=2.0.1
+    - proj.4 >=4.8.0
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -51,6 +54,9 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.5_1
+    - geos >=3.4.0
+    - libgdal >=2.0.1
+    - proj.4 >=4.8.0
 
 test:
   commands:
