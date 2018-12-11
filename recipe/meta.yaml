@@ -44,7 +44,7 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.5_1
-    - libgdal
+    - r-rgdal
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -53,7 +53,7 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.5_1
-    - libgdal
+    - r-rgdal
 
 test:
   commands:
