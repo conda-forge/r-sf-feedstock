@@ -17,7 +17,8 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1000
-  skip: true  # [win32 or vc<14]
+  skip: true  # [win64 and vc<14]
+  skip: true # [win32]
 
   rpaths:
     - lib/R/lib/
@@ -25,8 +26,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        
-    - {{ compiler('cxx') }}      
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('m2w64_cxx') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}sed               # [win]
     - {{posix}}grep              # [win]
