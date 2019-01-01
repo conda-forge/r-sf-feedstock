@@ -1,4 +1,4 @@
-{% set version = '0.6-3' %}
+{% set version = '0.7-2' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,12 +12,12 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 4aee5e166e3514d2d3d1b56ae64156e7c6c39da2cf447ead14ca524899f7ca30
+  sha256: d859d3da962ee58fc5f67ad3c557b90fa333849523e52256e01ec020c2f2cc9e
 
 build:
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win]
+  number: 1000
+  skip: true  # [win32 and vc<14]
 
   rpaths:
     - lib/R/lib/
@@ -41,18 +41,18 @@ requirements:
     - r-base
     - r-dbi >=0.8
     - r-rcpp
-    - r-classint
+    - r-classint >=0.2_1
     - r-magrittr
-    - r-units >=0.5_1
+    - r-units >=0.6_0
     - libgdal
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-dbi >=0.8
     - r-rcpp
-    - r-classint
+    - r-classint >=0.2_1
     - r-magrittr
-    - r-units >=0.5_1
+    - r-units >=0.6_0
     - libgdal
 
 test:
