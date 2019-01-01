@@ -9,9 +9,6 @@ jobs:
       win_vc14:
         CONFIG: win_vc14
         CONDA_BLD_PATH: D:\\bld\\
-      win_vc9:
-        CONFIG: win_vc9
-        CONDA_BLD_PATH: D:\\bld\\
   steps:
     # TODO: Fast finish on azure pipelines?
     - script: |

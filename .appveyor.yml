@@ -12,9 +12,6 @@ environment:
     - CONFIG: win_vc14
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
-    - CONFIG: win_vc9
-      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
-
 
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
