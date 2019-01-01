@@ -18,7 +18,7 @@ build:
   merge_build_host: True  # [win]
   number: 1000
   skip: true  # [win64 and vc<14]
-  skip: true # [win32]
+  skip: true  # [win32]
 
   rpaths:
     - lib/R/lib/
