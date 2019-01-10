@@ -44,14 +44,14 @@ requirements:
     - gdal                       # [win]
     - libgdal                    # [unix]
     - proj4                      # [unix]
-    - geos >=3.6.2,<3.6.3.0a0    # [unix]
+    - geos                       # [unix]
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - gdal                       # [win]
     - libgdal                    # [unix]
     - proj4                      # [unix]
-    - geos >=3.6.2,<3.6.3.0a0    # [unix]
+    - geos                       # [unix]
     - r-dbi >=0.8
     - r-rcpp
     - r-classint >=0.2_1

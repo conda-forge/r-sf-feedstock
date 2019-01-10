@@ -12,9 +12,13 @@ cxx_compiler:
 - toolchain_cxx
 docker_image:
 - condaforge/linux-anvil
+geos:
+- 3.7.0
 libgdal:
 - '2.3'
 pin_run_as_build:
+  geos:
+    max_pin: x.x.x
   libgdal:
     max_pin: x.x
   proj4:

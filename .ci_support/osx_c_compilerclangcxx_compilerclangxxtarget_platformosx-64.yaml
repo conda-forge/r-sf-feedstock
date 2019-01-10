@@ -12,6 +12,8 @@ cran_mirror:
 - https://cran.r-project.org
 cxx_compiler:
 - clangxx
+geos:
+- 3.7.0
 libgdal:
 - '2.3'
 macos_machine:
@@ -19,6 +21,8 @@ macos_machine:
 macos_min_version:
 - '10.9'
 pin_run_as_build:
+  geos:
+    max_pin: x.x.x
   libgdal:
     max_pin: x.x
   proj4:
