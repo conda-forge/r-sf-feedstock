@@ -1,0 +1,36 @@
+build_number_decrement:
+- '1000'
+c_compiler:
+- toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cran_mirror:
+- https://cran.r-project.org
+cxx_compiler:
+- toolchain_cxx
+docker_image:
+- condaforge/linux-anvil
+libgdal:
+- '2.3'
+pin_run_as_build:
+  libgdal:
+    max_pin: x.x
+  proj4:
+    max_pin: x.x.x
+  r-base:
+    max_pin: x.x.x
+proj4:
+- 5.2.0
+r_base:
+- 3.5.1
+target_platform:
+- linux-64
+zip_keys:
+- - c_compiler
+  - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement

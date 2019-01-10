@@ -1,0 +1,17 @@
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cran_mirror:
+- https://cran.r-project.org
+gdal:
+- '2.3'
+pin_run_as_build:
+  gdal:
+    max_pin: x.x
+  r-base:
+    max_pin: x.x.x
+r_base:
+- 3.5.1
+target_platform:
+- win-64
