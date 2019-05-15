@@ -24,19 +24,12 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}grep              # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - {{posix}}autoconf
-    - {{posix}}automake          # [not win]
-    - {{posix}}automake-wrapper  # [win]
+    - {{posix}}automake
     - {{posix}}pkg-config
     - {{posix}}make
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-dbi >=0.8
@@ -44,24 +37,21 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.6_0
-    - {{native}}gdal             # [win]
-    - {{native}}libgdal          # [unix]
-    - {{native}}proj4            # [unix]
+    - libgdal
+    - proj4 <6  # checks for epsg which is not present in proj4 6.0.0
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
     - r-dbi >=0.8
     - r-rcpp
     - r-classint >=0.2_1
     - r-magrittr
     - r-units >=0.6_0
-    - {{native}}gdal             # [win]
-    - {{native}}libgdal          # [unix]
+    - libgdal
+    - proj4 <6  # checks for epsg which is not present in proj4 6.0.0
 
 test:
   commands:
-    - $R -e "library('sf')"  # [not win]
-    - "\"%R%\" -e \"library('sf')\""  # [win]
+    - $R -e "library('sf')"
 
 about:
   home: https://github.com/r-spatial/sf/
