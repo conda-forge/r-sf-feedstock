@@ -1,4 +1,4 @@
-{% set version = '0.7-3' %}
+{% set version = '0.7-4' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 0d09d42aa02206a45196a17d8e8d8a946511ab88153db84b45bf56085a5c34ad
+  sha256: 2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e
 
 build:
   skip: True  # [win]
@@ -38,7 +38,7 @@ requirements:
     - r-magrittr
     - r-units >=0.6_0
     - libgdal
-    - proj4 <6  # checks for epsg which is not present in proj4 6.0.0
+    - proj4
   run:
     - r-base
     - r-dbi >=0.8
@@ -47,7 +47,7 @@ requirements:
     - r-magrittr
     - r-units >=0.6_0
     - libgdal
-    - proj4 <6  # checks for epsg which is not present in proj4 6.0.0
+    - proj4
 
 test:
   commands:
