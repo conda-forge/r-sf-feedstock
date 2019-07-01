@@ -8,16 +8,17 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: sf_{{ version }}.tar.gz
-  url:
-    - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e
+  url:  # [not win]
+    - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz  # [not win]
+    - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
+  sha256: 2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e  # [not win]
+
+  url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
+  sha256: 464136984c1e16eb2f546005ca0d38496602a6a78f8fb8a307ee73265c3cfb4c  # [win]
 
 build:
-  skip: True  # [win]
+  number: 2
   merge_build_host: True  # [win]
-  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,10 +27,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{posix}}autoconf
-    - {{posix}}automake
-    - {{posix}}pkg-config
-    - {{posix}}make
   host:
     - r-base
     - r-dbi >=0.8
@@ -37,8 +34,8 @@ requirements:
     - r-classint
     - r-magrittr
     - r-units >=0.6_0
-    - libgdal
-    - proj4
+    - libgdal  # [not win]
+    - proj4  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
@@ -46,12 +43,13 @@ requirements:
     - r-classint >=0.2_1
     - r-magrittr
     - r-units >=0.6_0
-    - libgdal
-    - proj4
+    - libgdal  # [not win]
+    - proj4  # [not win]
 
 test:
   commands:
-    - $R -e "library('sf')"
+    - $R -e "library('sf')"  # [not win]
+    - R -e \"library('sf')\"  # [win]
 
 about:
   home: https://github.com/r-spatial/sf/
