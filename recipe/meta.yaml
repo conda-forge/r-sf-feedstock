@@ -17,7 +17,7 @@ source:
   sha256: 62bcf0cfbbb36a04491f6d61b0acd5715b894ef0516193d1d3f69483470115df  # [win]
 
 build:
-  number: 2
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
