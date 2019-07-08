@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo $PKG_CONFIG_PATH
+echo "{PREFIX}
 export CPPFLAGS="${CPPFLAGS} -Wl,-rpath,${PREFIX}/lib"
 export PKG_CPPFLAGS="-I${PREFIX}/include -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1"
 export PKG_LIBS="-L$PREFIX/lib"
