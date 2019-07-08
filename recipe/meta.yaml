@@ -1,4 +1,4 @@
-{% set version = '0.7-4' %}
+{% set version = '0.7-6' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,13 +11,13 @@ source:
   url:  # [not win]
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
-  sha256: 2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e  # [not win]
+  sha256: 356a1c6758b823f8d2712e65d2dd45279d52070832dc158ed0b87916129a0b1d  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
-  sha256: 464136984c1e16eb2f546005ca0d38496602a6a78f8fb8a307ee73265c3cfb4c  # [win]
+  sha256: a6148024fc372af631dc35b0988fb4173e9b6122f8e6ffc4f425aabbc8e69614  # [win]
 
 build:
-  number: 2
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
