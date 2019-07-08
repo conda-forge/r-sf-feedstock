@@ -36,7 +36,7 @@ requirements:
     - r-units >=0.6_0
     - libgdal  # [not win]
     - proj4  # [not win]
-    - pkgconfig
+    - pkg-config  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
@@ -46,7 +46,7 @@ requirements:
     - r-units >=0.6_0
     - libgdal  # [not win]
     - proj4  # [not win]
-    - pkgconfig
+    - pkg-config  # [not win]
 
 test:
   commands:
