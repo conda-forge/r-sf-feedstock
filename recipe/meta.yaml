@@ -14,7 +14,7 @@ source:
   sha256: 2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e  # [not win]
 
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
-  sha256: 464136984c1e16eb2f546005ca0d38496602a6a78f8fb8a307ee73265c3cfb4c  # [win]
+  sha256: cc9b79e4f145dc6754e04e63ebd35872640d3017054dfa92a44ed50ff7838198  # [win]
 
 build:
   number: 2
@@ -36,6 +36,7 @@ requirements:
     - r-units >=0.6_0
     - libgdal  # [not win]
     - proj4  # [not win]
+    - pkgconfig
   run:
     - r-base
     - r-dbi >=0.8
@@ -45,6 +46,7 @@ requirements:
     - r-units >=0.6_0
     - libgdal  # [not win]
     - proj4  # [not win]
+    - pkgconfig
 
 test:
   commands:
