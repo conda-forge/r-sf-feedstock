@@ -46,7 +46,6 @@ requirements:
     - r-units >=0.6_0
     - libgdal  # [not win]
     - proj4  # [not win]
-    - pkg-config  # [not win]
 
 test:
   commands:
