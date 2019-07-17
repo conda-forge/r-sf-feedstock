@@ -1,33 +1,30 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '4'
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '4'
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
 libgdal:
 - '2.4'
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
 pin_run_as_build:
   libgdal:
     max_pin: x.x
   proj4:
     max_pin: x.x.x
   r-base:
-    max_pin: x.x.x
+    min_pin: x.x
+    max_pin: x.x
 proj4:
 - 6.1.0
 r_base:
 - 3.5.1
 target_platform:
-- osx-64
+- linux-64
