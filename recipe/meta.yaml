@@ -13,11 +13,11 @@ source:
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
   sha256: 356a1c6758b823f8d2712e65d2dd45279d52070832dc158ed0b87916129a0b1d  # [not win]
 
-  url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win and r_base<3.6]
+  url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win and r_base<36]
   sha256: 62bcf0cfbbb36a04491f6d61b0acd5715b894ef0516193d1d3f69483470115df  # [win]
   
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
-  sha256: 203b5c6dcd33284885d6493d475152efdf00aa06ae35b8ea7548735e90869e65  # [win and r_base>=3.6]
+  sha256: 203b5c6dcd33284885d6493d475152efdf00aa06ae35b8ea7548735e90869e65  # [win and r_base>=36]
 
 build:
   number: 0
