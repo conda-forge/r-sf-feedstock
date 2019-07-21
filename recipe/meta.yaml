@@ -27,6 +27,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - pkg-config
   host:
     - r-base
     - r-dbi >=0.8
@@ -63,6 +64,4 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
     - mingwandroid
