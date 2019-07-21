@@ -10,20 +10,12 @@ jobs:
   strategy:
     maxParallel: 4
     matrix:
-      win_c_compilervs2008cxx_compilervs2008r_base3.5.1target_platformwin-64:
-        CONFIG: win_c_compilervs2008cxx_compilervs2008r_base3.5.1target_platformwin-64
+      win_r_base3.5.1target_platformwin-64:
+        CONFIG: win_r_base3.5.1target_platformwin-64
         CONDA_BLD_PATH: D:\\bld\\
         UPLOAD_PACKAGES: True
-      win_c_compilervs2008cxx_compilervs2008r_base3.6target_platformwin-64:
-        CONFIG: win_c_compilervs2008cxx_compilervs2008r_base3.6target_platformwin-64
-        CONDA_BLD_PATH: D:\\bld\\
-        UPLOAD_PACKAGES: True
-      win_c_compilervs2015cxx_compilervs2015r_base3.5.1target_platformwin-64:
-        CONFIG: win_c_compilervs2015cxx_compilervs2015r_base3.5.1target_platformwin-64
-        CONDA_BLD_PATH: D:\\bld\\
-        UPLOAD_PACKAGES: True
-      win_c_compilervs2015cxx_compilervs2015r_base3.6target_platformwin-64:
-        CONFIG: win_c_compilervs2015cxx_compilervs2015r_base3.6target_platformwin-64
+      win_r_base3.6target_platformwin-64:
+        CONFIG: win_r_base3.6target_platformwin-64
         CONDA_BLD_PATH: D:\\bld\\
         UPLOAD_PACKAGES: True
   steps:
