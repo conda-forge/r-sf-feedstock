@@ -1,4 +1,4 @@
-{% set version = '0.7-6' %}
+{% set version = "0.8-0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -19,7 +19,7 @@ source:
   sha256: 087db212bc4201c5e33067d0e4dceec81e6a71a3fb84c88ff3c7366274b402dc  # [win]  
   {% endif %}
 build:
-  number: 5
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
