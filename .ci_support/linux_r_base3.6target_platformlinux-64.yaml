@@ -17,8 +17,6 @@ libgdal:
 pin_run_as_build:
   libgdal:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
   r-base:
     min_pin: x.x
     max_pin: x.x
