@@ -36,8 +36,8 @@ requirements:
   host:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint
+    - r-rcpp >=0.12.18
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
@@ -45,8 +45,7 @@ requirements:
   run:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint >=0.2_1
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
