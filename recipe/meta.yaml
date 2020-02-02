@@ -1,4 +1,4 @@
-{% set version = "0.8-0" %}
+{% set version = "0.8-1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,12 +11,12 @@ source:
   url:  # [not win]
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
-  sha256: 8ee354f70b073bce124f2c138ebd2748936f890a7b4c380075c189cf36c0be15  # [not win]
+  sha256: a9eb53f7b5d051e6a0dc86d07f7b8b760829c9c9c0ec268b1eecde50c9d99e9f  # [not win]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
   {% if r_base[0:3] == '3.5' %}
-  sha256: 29a8ca02060350748c53e862ecd8e1bf40b3557b62c61e98e1c122cf0462e18d  # [win]
+  sha256: 3836338453ca1957094a4d0e4745306c051d414ebc956929021ddcb87f54c11d  # [win]
   {% else %}
-  sha256: 302a3868a52a2084e2631a5f10df713b5b9f786aa8c384e392579c7e3edc7d2b  # [win]  
+  sha256: 8dafefe3142f6c3fa70e648f34b11377bd33a8afcd92ecc2091907ce6e97114e  # [win]  
   {% endif %}
 build:
   number: 0
@@ -36,21 +36,20 @@ requirements:
   host:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint
+    - r-rcpp >=0.12.18
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint >=0.2_1
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
 
 test:
   commands:
