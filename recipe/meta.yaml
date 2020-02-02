@@ -41,7 +41,7 @@ requirements:
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
@@ -49,7 +49,7 @@ requirements:
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
 
 test:
   commands:
