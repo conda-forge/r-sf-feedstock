@@ -14,12 +14,12 @@ source:
   sha256: a9eb53f7b5d051e6a0dc86d07f7b8b760829c9c9c0ec268b1eecde50c9d99e9f  # [not win]
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
   {% if r_base[0:3] == '3.5' %}
-  sha256: 3836338453ca1957094a4d0e4745306c051d414ebc956929021ddcb87f54c11d  # [win]
+  sha256: b9a48b06aed4a67388eb80c77945392c6d2396c5585ee609a6f73deefaafc67d  # [win]
   {% else %}
-  sha256: 8dafefe3142f6c3fa70e648f34b11377bd33a8afcd92ecc2091907ce6e97114e  # [win]  
+  sha256: 8877c60d5973d988604b45789d3373605313d3df16d0343d62dc5466183c5b71  # [win]  
   {% endif %}
 build:
-  number: 0
+  number: 1
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
