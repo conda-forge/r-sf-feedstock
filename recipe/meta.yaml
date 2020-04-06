@@ -1,4 +1,4 @@
-{% set version = '0.9-0' %}
+{% set version = "0.9-0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,12 +12,14 @@ source:
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
   sha256: c65d172090b88ffdc4dc894dcb2fd8abb407be07191bef56926ddab3074df984  # [not win]
-
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
-  sha256: 4ff36ab29ac21a9a194ed6ffabb67d305315c8fa3eac6dad951351482e771a49  # [win]
-
+  {% if r_base[0:3] == '3.5' %}
+  sha256: cf85f950ae04a03b86a32ca23ba1cd43d3e07f0fb91d3b980f3c1de7c7831b41  # [win]
+  {% else %}
+  sha256: 4ff36ab29ac21a9a194ed6ffabb67d305315c8fa3eac6dad951351482e771a49  # [win]  
+  {% endif %}
 build:
-  number: 0
+  number: 1
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -25,26 +27,29 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}       # [unix]
+    - {{ compiler('cxx') }}     # [unix]
+    - {{ compiler('m2w64_c') }}       # [win]
+    - {{ compiler('m2w64_cxx') }}     # [win]
+    - posix    # [win]
+    - pkg-config
   host:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint
+    - r-rcpp >=0.12.18
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp
-    - r-classint >=0.2_1
+    - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj4  # [not win]
+    - proj  # [not win]
 
 test:
   commands:
@@ -62,6 +67,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
+    - conda-forge/r
     - mingwandroid
