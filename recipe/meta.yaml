@@ -1,4 +1,4 @@
-{% set version = "0.8-1" %}
+{% set version = '0.9-0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,15 +11,13 @@ source:
   url:  # [not win]
     - https://cran.r-project.org/src/contrib/sf_{{ version }}.tar.gz  # [not win]
     - https://cran.r-project.org/src/contrib/Archive/sf/sf_{{ version }}.tar.gz  # [not win]
-  sha256: a9eb53f7b5d051e6a0dc86d07f7b8b760829c9c9c0ec268b1eecde50c9d99e9f  # [not win]
+  sha256: c65d172090b88ffdc4dc894dcb2fd8abb407be07191bef56926ddab3074df984  # [not win]
+
   url: https://cran.r-project.org/bin/windows/contrib/{{ r_base[0:3] }}/sf_{{ version }}.zip  # [win]
-  {% if r_base[0:3] == '3.5' %}
-  sha256: b9a48b06aed4a67388eb80c77945392c6d2396c5585ee609a6f73deefaafc67d  # [win]
-  {% else %}
-  sha256: 8877c60d5973d988604b45789d3373605313d3df16d0343d62dc5466183c5b71  # [win]  
-  {% endif %}
+  sha256: 4ff36ab29ac21a9a194ed6ffabb67d305315c8fa3eac6dad951351482e771a49  # [win]
+
 build:
-  number: 1
+  number: 0
   merge_build_host: True  # [win]
   rpaths:
     - lib/R/lib/
@@ -27,29 +25,26 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}       # [unix]
-    - {{ compiler('cxx') }}     # [unix]
-    - {{ compiler('m2w64_c') }}       # [win]
-    - {{ compiler('m2w64_cxx') }}     # [win]
-    - posix    # [win]
-    - pkg-config
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - r-base
     - r-dbi >=0.8
-    - r-rcpp >=0.12.18
-    - r-classint >=0.4_1
+    - r-rcpp
+    - r-classint
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj  # [not win]
+    - proj4  # [not win]
   run:
     - r-base
     - r-dbi >=0.8
-    - r-classint >=0.4_1
+    - r-rcpp
+    - r-classint >=0.2_1
     - r-magrittr
     - r-units >=0.6_0
     - libgdal  # [not win]
-    - proj  # [not win]
+    - proj4  # [not win]
 
 test:
   commands:
@@ -67,5 +62,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - conda-forge/r
+    - johanneskoester
+    - bgruening
     - mingwandroid
