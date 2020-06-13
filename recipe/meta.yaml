@@ -1,4 +1,4 @@
-{% set version = "0.9-3" %}
+{% set version = "0.9-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 9dc182484a97a50bc3d7dea715b8c4b8fcdcd82914bc921ae313668464970962
+  sha256: bd9e58da8931e1abd153543249298cd8a9cc682d06066da37877f71bc0b7f5f5
 
 build:
   merge_build_host: true  # [win]
