@@ -3,7 +3,7 @@ About r-sf
 
 Home: https://github.com/r-spatial/sf/, https://r-spatial.github.io/sf/
 
-Package license: GPL-2 | MIT
+Package license: GPL-2.0-only OR MIT
 
 Feedstock license: BSD-3-Clause
 
