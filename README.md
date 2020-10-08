@@ -5,11 +5,9 @@ Home: https://github.com/r-spatial/sf/, https://r-spatial.github.io/sf/
 
 Package license: GPL-2.0-only OR MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sf-feedstock/blob/master/LICENSE.txt)
 
 Summary: Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations.
-
-
 
 Current build status
 ====================
