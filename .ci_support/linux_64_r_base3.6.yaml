@@ -25,7 +25,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 7.1.1
+- 7.2.0
 r_base:
 - '3.6'
 target_platform:
@@ -33,3 +33,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - cdt_name
+  - docker_image
