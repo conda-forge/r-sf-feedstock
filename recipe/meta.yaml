@@ -42,6 +42,7 @@ requirements:
     - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
+    - r-s2
     - libgdal  # [not win]
     - proj  # [not win]
   run:
@@ -52,6 +53,7 @@ requirements:
     - r-classint >=0.4_1
     - r-magrittr
     - r-units >=0.6_0
+    - r-s2
     - libgdal  # [not win]
     - proj  # [not win]
 
