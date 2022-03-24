@@ -35,6 +35,7 @@ requirements:
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - sysroot_linux-64 2.17  # [linux64]
   host:
     - r-base
     - r-dbi >=0.8
