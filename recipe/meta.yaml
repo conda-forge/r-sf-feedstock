@@ -21,6 +21,13 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-classint                 # [build_platform != target_platform]
+    - r-dbi                      # [build_platform != target_platform]
+    - r-units                    # [build_platform != target_platform]
+    - r-magrittr                 # [build_platform != target_platform]
+    - r-s2                       # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
