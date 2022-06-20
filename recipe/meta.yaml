@@ -28,6 +28,8 @@ requirements:
     - r-magrittr                 # [build_platform != target_platform]
     - r-s2                       # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
+    - libgdal                    # [build_platform != target_platform]
+    - proj                       # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
