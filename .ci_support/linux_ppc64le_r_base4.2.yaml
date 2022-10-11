@@ -1,11 +1,7 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '10'
-cdt_arch:
-- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -23,17 +19,15 @@ docker_image:
 libgdal:
 - '3.5'
 pin_run_as_build:
-  libgdal:
-    max_pin: x.x
   r-base:
     min_pin: x.x
     max_pin: x.x
 proj:
 - 9.0.1
 r_base:
-- '4.0'
+- '4.2'
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
