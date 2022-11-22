@@ -1,0 +1,42 @@
+From 7d1b709a8b88f24fb6e76b66a5715d61aa15eb48 Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Tue, 22 Nov 2022 13:26:39 +0100
+Subject: [PATCH] Don't build winlibs
+
+---
+ src/Makevars.win | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/src/Makevars.win b/src/Makevars.win
+index 1aaa144..004b887 100644
+--- a/src/Makevars.win
++++ b/src/Makevars.win
+@@ -3,12 +3,13 @@ RWINLIB = ../windows/gdal3-$(VERSION)
+ TARGET = lib$(subst gcc,,$(COMPILED_BY))$(R_ARCH)
+ 
+ PKG_CPPFLAGS =\
+-	-I$(RWINLIB)/include \
++	-I${PREFIX_CYG}/include \
++	-I${LIBRARY_PREFIX_CYG}/include \
+ 	-DHAVE_PROJ_H
+ 
+ PKG_LIBS = \
+ 	-L$(RWINLIB)/$(TARGET) \
+-	-L$(RWINLIB)/lib$(R_ARCH) \
++	-L${LIBRARY_PREFIX}/lib \
+ 	-lgdal -lsqlite3 -lspatialite -lproj -lgeos_c -lgeos  \
+ 	-ljson-c -lnetcdf -lmariadbclient -lpq -lpgport -lpgcommon \
+ 	-lwebp -lcurl -lssh2 -lssl \
+@@ -24,9 +25,6 @@ CXX_STD = CXX11
+ 
+ winlibs:
+ 	mkdir -p ../inst
+-	"${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" --vanilla "../tools/winlibs.R" $(VERSION)
+-	cp -r $(RWINLIB)/share/gdal ../inst/
+-	cp -r $(RWINLIB)/share/proj ../inst/
+ 
+ clean:
+ 	rm -f $(SHLIB) $(OBJECTS)
+-- 
+2.38.1
+
