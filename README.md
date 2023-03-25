@@ -1,13 +1,28 @@
-About r-sf
-==========
-
-Home: https://github.com/r-spatial/sf/, https://r-spatial.github.io/sf/
-
-Package license: GPL-2.0-only OR MIT
+About r-sf-feedstock
+====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sf-feedstock/blob/main/LICENSE.txt)
 
+About r-sf
+----------
+
+Home: https://r-spatial.github.io/sf/
+
+Package license: GPL-2.0-only OR MIT
+
 Summary: Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations.
+
+Development: https://github.com/r-spatial/sf/
+About r-sf
+----------
+
+Home: https://r-spatial.github.io/sf/
+
+Package license: GPL-2.0-only OR MIT
+
+Summary: Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations.
+
+Development: https://github.com/r-spatial/sf/
 
 Current build status
 ====================
@@ -80,13 +95,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5440&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-sf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-sf-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
