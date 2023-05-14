@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,7 +13,7 @@ cran_mirror:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 libgdal:
 - '3.6'
 macos_machine:
@@ -23,7 +23,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 9.1.0
+- 9.2.0
 r_base:
 - '4.2'
 target_platform:
