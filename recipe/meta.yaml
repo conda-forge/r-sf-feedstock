@@ -15,7 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   skip: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,6 +45,7 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
+    - geos     # [not win]
     - libgdal  # [not win]
     - proj     # [not win]
   run:
@@ -56,8 +57,6 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
-    - libgdal  # [not win]
-    - proj  # [not win]
 
 test:
   commands:
