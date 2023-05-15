@@ -17,7 +17,7 @@ cxx_compiler_version:
 geos:
 - 3.11.2
 libgdal:
-- '3.6'
+- '3.7'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
