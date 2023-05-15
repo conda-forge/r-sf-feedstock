@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '15'
 geos:
-- 3.11.1
+- 3.11.2
 libgdal:
 - '3.6'
 macos_machine:
