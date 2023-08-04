@@ -27,7 +27,8 @@ requirements:
     - r-rcpp                     # [build_platform != target_platform]
     - r-s2                       # [build_platform != target_platform]
     - r-classint                 # [build_platform != target_platform]
-    - r-units                    # [build_platform != target_platform]
+    # triggers bad post-link script from udunits2
+    #- r-units                    # [build_platform != target_platform]
     - r-magrittr                 # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ compiler('m2w64_c') }}    # [win]
