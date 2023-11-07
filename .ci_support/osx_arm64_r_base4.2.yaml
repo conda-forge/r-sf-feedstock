@@ -1,5 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 c_compiler:
 - clang
 c_compiler_version:
@@ -19,7 +19,7 @@ geos:
 libgdal:
 - '3.7'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   r-base:
     min_pin: x.x
@@ -27,9 +27,9 @@ pin_run_as_build:
 proj:
 - 9.3.0
 r_base:
-- '4.3'
+- '4.2'
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
