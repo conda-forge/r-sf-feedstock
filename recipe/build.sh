@@ -10,5 +10,7 @@ if [[ ${target_platform} == osx-64 ]]; then
   export CXX="${CXX} --std=c++14 -Wl,-rpath,${PREFIX}/lib"
 fi
 
+# shellcheck disable=SC2086
 export DISABLE_AUTOBREW=1
+
 ${R} CMD INSTALL --build . ${R_ARGS}
