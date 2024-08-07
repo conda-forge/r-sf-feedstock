@@ -30,7 +30,7 @@ index 6d17929..499f670 100644
 -	cp -r "$(R_TOOLS_SOFT)/share/gdal" ../inst/
 -	cp -r "$(R_TOOLS_SOFT)/share/proj" ../inst/
 -
-+PKG_LIBS = -L$(LIBRARY_LIB) -fopenmp -lgdal -lgfortran -lquadmath -lspatialite -lgeos_c -lgeos -lgeotiff -lproj
++PKG_LIBS = -L$(LIBRARY_LIB) -fopenmp -lgdal -lquadmath -lspatialite -lgeos_c -lgeos -lgeotiff -lproj
 +PKG_CPPFLAGS = -I$(LIBRARY_INC) -DHAVE_PROJ_H
  CXX_STD = CXX
 -
