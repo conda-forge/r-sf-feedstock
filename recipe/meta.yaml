@@ -10,10 +10,10 @@ source:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
   sha256: e96e191011cdf2a073c773bdfc50ffd4a5d80f1da0ba1aa05db8015da45a9987
+  patches:
+    - patches/0001-min-ucrt-libs.patch
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 8
   rpaths:
     - lib/R/lib/
@@ -52,9 +52,9 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
-    - geos     # [not win]
-    - libgdal  # [not win]
-    - proj     # [not win]
+    - geos
+    - libgdal
+    - proj
   run:
     - r-base
     - r-classint >=0.4_1
