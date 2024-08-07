@@ -10,15 +10,13 @@ source:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
   sha256: e96e191011cdf2a073c773bdfc50ffd4a5d80f1da0ba1aa05db8015da45a9987
-  patches:
-    - patches/0001-min-ucrt-libs.patch
 
 build:
   number: 8
   rpaths:
     - lib/R/lib/
     - lib/
-  skip: true  # [not win]
+  skip: true  # [win]
 
 requirements:
   build:
