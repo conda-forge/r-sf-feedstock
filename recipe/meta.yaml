@@ -10,13 +10,14 @@ source:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
   sha256: 22c7c2d2e98a6142e4beff07e70c169238257312e6eb3591b129ed3c7d18b286
+  patches:
+    - patches/0001-minimal-ucrt-libs.patch
 
 build:
   number: 1
   rpaths:
     - lib/R/lib/
     - lib/
-  skip: true  # [win]
 
 requirements:
   build:
@@ -29,10 +30,8 @@ requirements:
     - r-units                      # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}            # [not win]
-    - {{ compiler('m2w64_c') }}    # [win]
-    - {{ stdlib("c") }}            # [win]
     - {{ compiler('cxx') }}        # [not win]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ compiler('r_clang') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]

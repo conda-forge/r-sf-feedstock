@@ -1,0 +1,43 @@
+From e7c2d5b4d856b5a4723761ed6ce027d888567e03 Mon Sep 17 00:00:00 2001
+From: Daniel Nachun <daniel.nachun@gmail.com>
+Date: Sat, 5 Oct 2024 14:58:07 -0700
+Subject: [PATCH] minimal ucrt libs
+
+---
+ src/Makevars.ucrt | 26 ++------------------------
+ 1 file changed, 2 insertions(+), 24 deletions(-)
+
+diff --git a/src/Makevars.ucrt b/src/Makevars.ucrt
+index 6d17929..e0f5d5e 100644
+--- a/src/Makevars.ucrt
++++ b/src/Makevars.ucrt
+@@ -1,24 +1,2 @@
+-
+-PKG_CPPFLAGS = \
+-	-DHAVE_PROJ_H
+-
+-ifeq (,$(shell pkg-config --version 2>/dev/null))
+-  LIBSHARPYUV = $(or $(and $(wildcard $(R_TOOLS_SOFT)/lib/libsharpyuv.a),-lsharpyuv),)
+-  PKG_LIBS =  \
+--fopenmp -lgdal -larmadillo -lopenblas -lgfortran -lquadmath -lpq -lpgcommon -lpgport -lodbc32 -lodbccp32 -lblosc -lkea -lhdf5_cpp -lhdf5 -lpoppler -llcms2 -lfreetype -lharfbuzz -lfreetype -llz4 -lpcre2-8 -lxml2 -lopenjp2 -lnetcdf -lmysqlclient -lspatialite -lgeos_c -lgeos -lminizip -lgeos -ljson-c -lgta -lfreexl -lexpat -lssl -lpsapi -lgif -lmfhdf -lhdf5_hl -lcrypto -lportablexdr -ldf -lhdf5 -lsz -lpng16 -lpng -lpoppler -llcms2 -lfreetype -lharfbuzz -lfreetype -llz4 -lpcre2-8 -lpcre -lcurl -lbcrypt -lrtmp -lssl -lssh2 -lidn2 -lunistring -liconv -lgcrypt -lcrypto -lgpg-error -lws2_32 -ltiff -llzma -ljpeg -lz -lcfitsio -lzstd -lwebpdecoder -lwebp $(LIBSHARPYUV) -lsbml-static -lgeotiff -lproj -lsqlite3 -lbz2 -lcrypt32 -lwldap32 -lsecur32
+-else
+-  PKG_LIBS = $(shell pkg-config --libs gdal geos proj)
+-endif
+-
+-all: clean winlibs
+-
+-winlibs:
+-	cp -r "$(R_TOOLS_SOFT)/share/gdal" ../inst/
+-	cp -r "$(R_TOOLS_SOFT)/share/proj" ../inst/
+-
+-CXX_STD = CXX
+-
+-clean:
+-	rm -f $(SHLIB) $(OBJECTS)
+-
+-.PHONY: all winlibs clean
++PKG_LIBS = -L$(LIBRARY_LIB) -lgdal -lgeos -lgeos_c -lproj
++PKG_CPPFLAGS = -I$(LIBRARY_INC)
+-- 
+2.45.2
+
