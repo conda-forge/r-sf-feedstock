@@ -29,7 +29,7 @@ requirements:
     - r-s2                         # [build_platform != target_platform]
     - r-units                      # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
-    - {{ stdlib("c") }}            # [not win]
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('r_clang') }}    # [win]
     - {{ posix }}filesystem        # [win]
