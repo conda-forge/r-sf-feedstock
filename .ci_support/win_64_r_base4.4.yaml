@@ -1,3 +1,5 @@
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -16,5 +18,7 @@ proj:
 - '9.5'
 r_base:
 - '4.4'
+r_clang_compiler_version:
+- '18'
 target_platform:
 - win-64
