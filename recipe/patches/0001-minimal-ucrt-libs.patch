@@ -37,7 +37,7 @@ index 6d17929..e0f5d5e 100644
 -
 -.PHONY: all winlibs clean
 +PKG_LIBS = -L$(LIBRARY_LIB) -lgdal -lgeos -lgeos_c -lproj
-+PKG_CPPFLAGS = -I$(LIBRARY_INC)
++PKG_CPPFLAGS = -DHAVE_PROJ_H -I$(LIBRARY_INC)
 -- 
 2.45.2
 
