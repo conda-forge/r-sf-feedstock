@@ -7,7 +7,7 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 geos:
-- 3.12.2
+- 3.13.0
 libgdal:
 - '3.9'
 pin_run_as_build:
