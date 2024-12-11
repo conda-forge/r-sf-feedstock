@@ -55,7 +55,7 @@ requirements:
     - r-s2 >=1.1.0
     - r-units >=0.7_0
     - geos
-    - libgdal
+    - libgdal-core
     - proj
   run:
     - r-base
