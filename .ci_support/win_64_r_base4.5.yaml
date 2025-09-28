@@ -18,7 +18,5 @@ proj:
 - '9.6'
 r_base:
 - '4.5'
-r_clang_compiler_version:
-- '18'
 target_platform:
 - win-64
