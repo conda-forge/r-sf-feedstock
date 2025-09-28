@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: b335a924a600b0e24a61a38550c5587a0ee54bfa2669cfb7adc6111b4551f7ee
+  sha256: 70c28a826387a56b5f270d48cbb42999f6fb59ec0e6984c84df920dbe0206e99
   patches:
     - patches/0001-minimal-ucrt-libs.patch
 
