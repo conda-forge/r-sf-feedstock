@@ -1,4 +1,4 @@
-{% set version = "1.0-20" %}
+{% set version = "1.0-21" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -22,6 +22,7 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  skip: True              # [ppc64le]
 
 requirements:
   build:
