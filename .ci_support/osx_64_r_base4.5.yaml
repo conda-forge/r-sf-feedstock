@@ -21,7 +21,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '19'
 geos:
-- 3.14.0
+- 3.13.1
 libgdal_core:
 - '3.11'
 macos_machine:
@@ -31,7 +31,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- '9.7'
+- '9.6'
 r_base:
 - '4.5'
 target_platform:
