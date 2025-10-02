@@ -33,6 +33,9 @@ requirements:
     - r-rcpp                       # [build_platform != target_platform]
     - r-s2                         # [build_platform != target_platform]
     - r-units                      # [build_platform != target_platform]
+    - r-sp                         # [build_platform != target_platform]
+    - r-matrix                     # [build_platform != target_platform]
+    - r-rpostgresql                # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}        # [not win]
@@ -55,6 +58,9 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
+    - r-sp
+    - r-matrix
+    - r-rpostgresql
     - geos
     - libgdal-core
     - proj
