@@ -18,7 +18,7 @@ build:
     - '*/R.dll'           # [win]
     - '*/Rblas.dll'       # [win]
     - '*/Rlapack.dll'     # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -66,6 +66,8 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
+    - {{ pin_compatible('libgdal-core') }}
+    - {{ pin_compatible('proj') }}
 
 test:
   commands:
