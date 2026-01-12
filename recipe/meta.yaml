@@ -66,6 +66,8 @@ requirements:
     - r-rcpp >=0.12.18
     - r-s2 >=1.1.0
     - r-units >=0.7_0
+    - libgdal-core
+    - proj
 
 test:
   commands:
