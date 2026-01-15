@@ -1,4 +1,4 @@
-{% set version = "1.0-23" %}
+{% set version = "1.0-24" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 4a44abad6e94b648b8a31269fa5a5ff862f69a9dfcdd60b8958a5b9ee3bddceb
+  sha256: 4eaf24aa19f8398304a465a48c07f4daadcf5c6e46b1e62c17a1fb7afd055afe
   patches:
     - patches/0001-minimal-ucrt-libs.patch
 
@@ -18,7 +18,7 @@ build:
     - '*/R.dll'           # [win]
     - '*/Rblas.dll'       # [win]
     - '*/Rlapack.dll'     # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
