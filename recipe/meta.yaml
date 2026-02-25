@@ -1,4 +1,4 @@
-{% set version = "1.0-24" %}
+{% set version = "1.1-0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sf/sf_{{ version }}.tar.gz
-  sha256: 4eaf24aa19f8398304a465a48c07f4daadcf5c6e46b1e62c17a1fb7afd055afe
+  sha256: 7ce76026eb51c789c123639901ad655273fedea29be508e3afd35000a122da25
   patches:
     - patches/0001-minimal-ucrt-libs.patch
 
