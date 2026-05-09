@@ -23,9 +23,9 @@ cxx_compiler_version:
 geos:
 - 3.14.1
 libgdal:
-- '3.12'
+- '3.13'
 libgdal_core:
-- '3.12'
+- '3.13'
 macos_machine:
 - arm64-apple-darwin20.0.0
 pin_run_as_build:
