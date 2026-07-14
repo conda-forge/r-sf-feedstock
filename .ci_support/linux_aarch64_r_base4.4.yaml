@@ -17,13 +17,13 @@ cxx_compiler:
 cxx_compiler_version:
 - '14'
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
+- quay.io/condaforge/linux-anvil-aarch64:alma9
 geos:
 - 3.14.1
 libgdal:
-- '3.12'
+- '3.13'
 libgdal_core:
-- '3.12'
+- '3.13'
 pin_run_as_build:
   r-base:
     min_pin: x.x
