@@ -3,7 +3,7 @@
 
 package:
   name: r-sf
-  version: {{ version|replace('-', '_') }}
+  version: "{{ version|replace('-', '_') }}"
 
 source:
   url:
@@ -52,7 +52,7 @@ requirements:
     - r-classint >=0.4_1
     - r-dbi >=0.8
     - r-magrittr
-    - r-rcpp >=0.12.18
+    - r-rcpp
     - r-s2 >=1.1.0
     - r-units >=0.7_0
     - geos
@@ -63,7 +63,7 @@ requirements:
     - r-classint >=0.4_1
     - r-dbi >=0.8
     - r-magrittr
-    - r-rcpp >=0.12.18
+    - r-rcpp
     - r-s2 >=1.1.0
     - r-units >=0.7_0
     - {{ pin_compatible('libgdal-core') }}
