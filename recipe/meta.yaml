@@ -18,7 +18,7 @@ build:
     - '*/R.dll'           # [win]
     - '*/Rblas.dll'       # [win]
     - '*/Rlapack.dll'     # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
