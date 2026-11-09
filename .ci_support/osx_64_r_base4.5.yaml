@@ -1,5 +1,3 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
 MACOSX_SDK_VERSION:
 - '11.0'
 c_compiler:
@@ -21,7 +19,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '21'
 geos:
-- 3.14.1
+- 3.15.0
 libgdal:
 - '3.13'
 libgdal_core:
